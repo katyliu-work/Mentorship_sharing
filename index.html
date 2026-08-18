@@ -8,7 +8,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
 <style>
 /* ===========================================
@@ -31,8 +31,8 @@
     --card-bg: #FFFFFF;
     --card-border: rgba(46,33,26,0.08);
 
-    --font-display: 'Noto Sans TC', sans-serif;
-    --font-body: 'Noto Sans TC', sans-serif;
+    --font-display: 'Inter', 'Noto Sans TC', sans-serif;
+    --font-body: 'Inter', 'Noto Sans TC', sans-serif;
 
     --radius-lg: 32px;
     --radius-md: 22px;
@@ -86,6 +86,18 @@ img, video, canvas, svg { max-width: 100%; max-height: 100%; }
     position: absolute; bottom: 72px; right: 140px;
     font-size: 22px; color: var(--text-secondary); font-weight: 700; letter-spacing: 2px;
 }
+.lang-toggle {
+    position: absolute; bottom: 72px; right: 140px;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    padding: 12px 24px; border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(46,33,26,0.05);
+    font-size: 20px; font-weight: 700; letter-spacing: 1px;
+    cursor: pointer; font-family: inherit;
+}
+.lang-toggle .lang-opt { color: var(--text-secondary); transition: color 0.2s ease; }
+.lang-toggle .lang-opt.active { color: var(--accent-text-safe); }
+.lang-toggle .lang-sep { color: var(--card-border); }
 
 /* ===========================================
    DECORATIVE ROUNDED BLOBS
@@ -342,9 +354,12 @@ h2.heading {
             <div class="blob d4" style="width:34px;height:34px;background:var(--accent);bottom:230px;right:330px;border-radius:50%;"></div>
             <div class="blob d5" style="width:22px;height:22px;background:var(--accent-2);top:430px;right:180px;border-radius:50%;"></div>
             <div class="center-content">
-                <h1 class="display reveal d1">透過<span class="highlight">行動</span><br>找回對設計的熱情</h1>
+                <h1 class="display reveal d1" id="coverTitle" data-zh='透過<span class="highlight">行動</span><br>找回對設計的熱情' data-en='Through <span class="highlight">Action</span>,<br>I Found My Way Back to Design'>透過<span class="highlight">行動</span><br>找回對設計的熱情</h1>
                 <div class="pill reveal d2"><span class="dot"></span>Katy Liu．2026</div>
             </div>
+            <button class="lang-toggle reveal d2" id="langToggle" type="button" aria-label="切換語言 / Switch language">
+                <span class="lang-opt" data-val="zh">中文</span><span class="lang-sep">/</span><span class="lang-opt" data-val="en">EN</span>
+            </button>
         </section>
 
         <!-- ============================================================
@@ -355,8 +370,8 @@ h2.heading {
             <div class="blob d2" style="width:46px;height:46px;background:var(--accent);bottom:160px;left:170px;border-radius:14px;transform:rotate(-10deg);"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>Before</div>
             <div class="content-wrap">
-                <h2 class="heading reveal d1">出發之前</h2>
-                <div class="item-card reveal d2" style="font-weight:400;font-size:38px;line-height:1.85;padding:56px 64px;">
+                <h2 class="heading reveal d1" data-zh="出發之前" data-en="Before I Left">出發之前</h2>
+                <div class="item-card reveal d2 js-fixed-width" id="slide2Card" style="font-weight:400;font-size:38px;line-height:1.85;padding:56px 64px;white-space:nowrap;width:fit-content;max-width:100%;display:block;text-align:left;" data-zh='離開一份工作，撕掉 "設計師" 的標籤，帶著很多迷惘，<br>在低潮期覺得自己可能要放棄做設計了' data-en="I quit my job and ripped off the “designer” label, carrying so much uncertainty with me.<br>At my lowest point, I genuinely thought I might be done with design for good.">
                     離開一份工作，撕掉 "設計師" 的標籤，帶著很多迷惘，<br>
                     在低潮期覺得自己可能要放棄做設計了
                 </div>
@@ -373,9 +388,9 @@ h2.heading {
             <div class="blob d3" style="width:38px;height:38px;background:var(--primary);top:200px;right:200px;border-radius:12px;transform:rotate(-14deg);"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>Before</div>
             <div class="center-content">
-                <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);">為什麼出發？</div>
+                <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);" data-zh="為什麼出發？" data-en="Why Did I Go?">為什麼出發？</div>
                 <h2 class="statement reveal d2" style="font-size:130px;font-family:var(--font-display);">Intuition</h2>
-                <div class="caption reveal d3">不想錯過這份機會 — 這個念頭，已經放在心裡好久了</div>
+                <div class="caption reveal d3" style="white-space:nowrap;" data-zh="不想錯過這份機會 — 這個念頭，已經放在心裡好久了" data-en="I didn’t want to miss this chance — a thought that had stuck with me for a long time.">不想錯過這份機會 — 這個念頭，已經放在心裡好久了</div>
             </div>
             <div class="slide-index reveal d1">03 / 15</div>
         </section>
@@ -388,11 +403,11 @@ h2.heading {
             <div class="chapter-pill reveal d1"><span class="dot"></span>Before</div>
             <div class="content-wrap" style="gap:44px;">
                 <div class="reveal d1" style="font-size:26px;color:var(--text-secondary);font-style:normal;">At the moment, life just doesn't feel interesting.</div>
-                <h2 class="heading reveal d2">出發前，我想達成的三件事</h2>
+                <h2 class="heading reveal d2" data-zh="出發前，我想達成的三件事" data-en="Three Goals I Had Before I Left">出發前，我想達成的三件事</h2>
                 <div class="card-list">
-                    <div class="item-card reveal d3"><span class="num">1</span>體驗在歐洲工作生活</div>
-                    <div class="item-card alt reveal d4"><span class="num">2</span>驗證自己的工作能力</div>
-                    <div class="item-card alt2 reveal d5"><span class="num">3</span>透過動手做，了解自己是否還想做設計</div>
+                    <div class="item-card reveal d3" data-zh='<span class="num">1</span>體驗在歐洲工作生活' data-en='<span class="num">1</span>Experience living and working in Europe'><span class="num">1</span>體驗在歐洲工作生活</div>
+                    <div class="item-card alt reveal d4" data-zh='<span class="num">2</span>驗證自己的工作能力' data-en='<span class="num">2</span>Find out if I could hold my own professionally'><span class="num">2</span>驗證自己的工作能力</div>
+                    <div class="item-card alt2 reveal d5" data-zh='<span class="num">3</span>透過動手做，了解自己是否還想做設計' data-en='<span class="num">3</span>Get hands-on and find out if I still wanted to do design'><span class="num">3</span>透過動手做，了解自己是否還想做設計</div>
                 </div>
             </div>
             <div class="slide-index reveal d1">04 / 15</div>
@@ -408,9 +423,9 @@ h2.heading {
                 <h2 class="heading reveal d2" style="font-size:66px;">UnternehmerTUM<br>Digital Product School</h2>
                 <div class="item-card reveal d3" style="display:block;padding:44px 48px;">
                     <ul style="list-style:none;display:flex;flex-direction:column;gap:26px;margin:0;padding:0;">
-                        <li style="display:flex;align-items:center;gap:18px;font-size:27px;color:var(--ink);font-weight:500;white-space:nowrap;"><span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>3 個月、1 個題目</li>
-                        <li style="display:flex;align-items:center;gap:18px;font-size:27px;color:var(--ink);font-weight:500;white-space:nowrap;"><span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>新創的節奏，從 0~1 創造解決方案</li>
-                        <li style="display:flex;align-items:center;gap:18px;font-size:27px;color:var(--ink);font-weight:500;white-space:nowrap;"><span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>團隊組成：PM, Interaction Designer, Software Engineer</li>
+                        <li style="display:flex;align-items:center;gap:18px;font-size:27px;color:var(--ink);font-weight:500;white-space:nowrap;" data-zh='<span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>3 個月、1 個題目' data-en='<span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>3 months, 1 challenge'><span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>3 個月、1 個題目</li>
+                        <li style="display:flex;align-items:center;gap:18px;font-size:27px;color:var(--ink);font-weight:500;white-space:nowrap;" data-zh='<span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>新創的節奏，從 0~1 創造解決方案' data-en='<span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>Startup pace — building a solution from 0 to 1'><span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>新創的節奏，從 0~1 創造解決方案</li>
+                        <li style="display:flex;align-items:center;gap:18px;font-size:27px;color:var(--ink);font-weight:500;white-space:nowrap;" data-zh='<span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>團隊組成：PM, Interaction Designer, Software Engineer' data-en='<span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>Team: PM, Interaction Designer, Software Engineer'><span style="flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--primary);"></span>團隊組成：PM, Interaction Designer, Software Engineer</li>
                     </ul>
                 </div>
             </div>
@@ -436,15 +451,15 @@ h2.heading {
                         <div class="card-list">
                             <div class="info-card">
                                 <div class="card-title">Known for Bureaucracy</div>
-                                <div class="card-body">出了名的行政效率與紙本文件需求</div>
+                                <div class="card-body" data-zh="出了名的行政效率與紙本文件需求" data-en="Famous for its red tape and mountains of paperwork">出了名的行政效率與紙本文件需求</div>
                             </div>
                             <div class="info-card alt">
-                                <div class="card-title">複雜的 Stakeholder</div>
+                                <div class="card-title" data-zh="複雜的 Stakeholder" data-en="Complex Stakeholders">複雜的 Stakeholder</div>
                                 <div class="card-body">IT Consultant + City of Stuttgart</div>
                             </div>
                             <div class="info-card alt2">
-                                <div class="card-title">團隊中沒有德國人</div>
-                                <div class="card-body">需要釐清德國的制度規範，找出問題與可著力的方向</div>
+                                <div class="card-title" data-zh="團隊中沒有德國人" data-en="No Germans on the Team">團隊中沒有德國人</div>
+                                <div class="card-body" data-zh="需要釐清德國的制度規範，找出問題與可著力的方向" data-en="We had to make sense of Germany’s systems and bureaucracy to find where we could actually make an impact">需要釐清德國的制度規範，找出問題與可著力的方向</div>
                             </div>
                         </div>
                     </div>
@@ -460,11 +475,11 @@ h2.heading {
             <div class="blob d1" style="width:26px;height:26px;background:var(--accent);top:150px;left:180px;border-radius:50%;"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
             <div class="content-wrap">
-                <h2 class="heading reveal d2" style="font-size:56px;white-space:nowrap;">團隊一起做的好玩嘗試</h2>
+                <h2 class="heading reveal d2" id="slide7Heading" style="font-size:56px;white-space:nowrap;width:max-content;" data-zh="團隊一起做的好玩嘗試" data-en="Fun Experiments We Tried as a Team">團隊一起做的好玩嘗試</h2>
                 <div class="card-list">
-                    <div class="item-card reveal d3" style="font-size:25px;padding:26px 30px;"><span class="num" style="width:40px;height:40px;font-size:18px;">1</span>在 Job Center 外面隨機訪談，潛入等候區偷偷問人</div>
-                    <div class="item-card alt reveal d4" style="font-size:25px;padding:26px 30px;"><span class="num" style="width:40px;height:40px;font-size:18px;">2</span>參加社區大學的「Onboarding Germany」活動</div>
-                    <div class="item-card alt2 reveal d5" style="font-size:25px;padding:26px 30px;"><span class="num" style="width:40px;height:40px;font-size:18px;">3</span>拜訪 Stuttgart Job Center，實際看到一堆紙本資料</div>
+                    <div class="item-card reveal d3" style="font-size:25px;padding:26px 30px;" data-zh='<span class="num" style="width:40px;height:40px;font-size:18px;">1</span>在 Job Center 外面隨機訪談，潛入等候區偷偷問人' data-en='<span class="num" style="width:40px;height:40px;font-size:18px;">1</span>Randomly interviewed people outside the Job Center — sneaking into the waiting area to ask questions'><span class="num" style="width:40px;height:40px;font-size:18px;">1</span>在 Job Center 外面隨機訪談，潛入等候區偷偷問人</div>
+                    <div class="item-card alt reveal d4" style="font-size:25px;padding:26px 30px;" data-zh='<span class="num" style="width:40px;height:40px;font-size:18px;">2</span>參加社區大學的「Onboarding Germany」活動' data-en='<span class="num" style="width:40px;height:40px;font-size:18px;">2</span>Attended an “Onboarding Germany” event at a local community college'><span class="num" style="width:40px;height:40px;font-size:18px;">2</span>參加社區大學的「Onboarding Germany」活動</div>
+                    <div class="item-card alt2 reveal d5" style="font-size:25px;padding:26px 30px;" data-zh='<span class="num" style="width:40px;height:40px;font-size:18px;">3</span>拜訪 Stuttgart Job Center，實際看到一堆紙本資料' data-en='<span class="num" style="width:40px;height:40px;font-size:18px;">3</span>Visited the Stuttgart Job Center and saw the mountains of paperwork firsthand'><span class="num" style="width:40px;height:40px;font-size:18px;">3</span>拜訪 Stuttgart Job Center，實際看到一堆紙本資料</div>
                 </div>
             </div>
             <div class="photo-slot reveal d3" style="top:310px;bottom:auto;height:560px;border:none;padding:0;overflow:hidden;background:none;display:block;">
@@ -481,8 +496,8 @@ h2.heading {
             <div class="blob d2" style="width:24px;height:24px;background:var(--accent);bottom:180px;left:240px;border-radius:50%;"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
             <div class="center-content">
-                <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);">議題研究的過程中的其他發現</div>
-                <h2 class="statement reveal d2" id="slide8Statement" style="white-space:nowrap;font-size:84px;">台灣的政府數位服務做得很好！</h2>
+                <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);text-align:center;" data-zh="議題研究的過程中的其他發現" data-en="Another Discovery Along the Way">議題研究的過程中的其他發現</div>
+                <h2 class="statement reveal d2" id="slide8Statement" style="white-space:nowrap;font-size:84px;text-align:center;" data-zh="台灣的政府數位服務做得很好！" data-en="Taiwan’s government digital services are actually really good!">台灣的政府數位服務做得很好！</h2>
             </div>
             <div class="slide-index reveal d1">08 / 15</div>
         </section>
@@ -494,14 +509,14 @@ h2.heading {
             <div class="blob d1" style="width:36px;height:36px;background:var(--accent);top:140px;right:210px;border-radius:12px;transform:rotate(14deg);"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
             <div class="content-wrap" style="gap:28px;">
-                <div class="sub-label reveal d1">實際開始做，設計師很頭痛</div>
+                <div class="sub-label reveal d1" data-zh="實際開始做，設計師很頭痛" data-en="Once We Started Building, Designers Felt the Pain">實際開始做，設計師很頭痛</div>
                 <h2 class="heading reveal d2" id="slide9Heading" style="white-space:nowrap;">PM &amp; SE are on top of <span class="highlight">DESIGNER</span></h2>
                 <div class="item-card reveal d3" style="display:flex;flex-direction:column;gap:16px;padding:44px 48px;">
-                    <div class="problem-label" style="font-weight:700;">Vibe Coding 讓概念可以快速地做出來</div>
-                    <div class="problem-label">設計師面臨的問題</div>
+                    <div class="problem-label" style="font-weight:700;" data-zh="Vibe Coding 讓概念可以快速地做出來" data-en="Vibe coding lets ideas come to life fast">Vibe Coding 讓概念可以快速地做出來</div>
+                    <div class="problem-label" data-zh="設計師面臨的問題" data-en="The problem designers now face">設計師面臨的問題</div>
                     <ul class="bullet-list">
-                        <li>一開始做很快，但確定方向後進度很慢</li>
-                        <li>PM &amp; SE 都可以把想法轉成設計，那設計師扮演什麼角色？</li>
+                        <li data-zh="一開始做很快，但確定方向後進度很慢" data-en="Things start fast, but progress slows once the direction is set">一開始做很快，但確定方向後進度很慢</li>
+                        <li data-zh="PM &amp; SE 都可以把想法轉成設計，那設計師扮演什麼角色？" data-en="If PMs and engineers can turn ideas into designs themselves, what’s left for the designer?">PM &amp; SE 都可以把想法轉成設計，那設計師扮演什麼角色？</li>
                     </ul>
                 </div>
             </div>
@@ -516,15 +531,15 @@ h2.heading {
             <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
             <div class="content-wrap" style="right:620px;">
                 <h2 class="heading reveal d2" style="font-size:58px;white-space:nowrap;">We still got the <span class="highlight">SUPER POWER</span></h2>
-                <div class="body-text reveal d3">打造一個從 0 到 1 的 MVP 產品</div>
+                <div class="body-text reveal d3" data-zh="打造一個從 0 到 1 的 MVP 產品" data-en="Building an MVP from scratch">打造一個從 0 到 1 的 MVP 產品</div>
                 <div class="card-list">
                     <div class="info-card reveal d4">
-                        <div class="card-title">產品體驗</div>
-                        <div class="card-body">全局思考不同的使用情境與操作節點</div>
+                        <div class="card-title" data-zh="產品體驗" data-en="Product Experience">產品體驗</div>
+                        <div class="card-body" data-zh="全局思考不同的使用情境與操作節點" data-en="Thinking holistically about every use case and touchpoint">全局思考不同的使用情境與操作節點</div>
                     </div>
                     <div class="info-card alt reveal d5">
-                        <div class="card-title">設計細節</div>
-                        <div class="card-body">建立 Design System，定義設計樣式</div>
+                        <div class="card-title" data-zh="設計細節" data-en="Design Details">設計細節</div>
+                        <div class="card-body" data-zh="建立 Design System，定義設計樣式" data-en="Built a design system and defined the visual style">建立 Design System，定義設計樣式</div>
                     </div>
                 </div>
             </div>
@@ -542,9 +557,9 @@ h2.heading {
             <div class="blob d2" style="width:28px;height:28px;background:var(--accent-2);bottom:190px;right:250px;border-radius:50%;"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
             <div class="center-content">
-                <div class="body-text reveal d1" style="font-size:30px;font-weight:700;color:var(--accent-text-safe);letter-spacing:1px;">對我而言</div>
-                <h2 class="statement reveal d2" style="font-size:80px;">設計師－引導團隊用<span class="highlight">視覺化溝通</span>的角色</h2>
-                <div class="caption reveal d3">將概念視覺化能有效對齊彼此想法，尤其在不同職能、不同文化的團隊裡</div>
+                <div class="body-text reveal d1" style="font-size:30px;font-weight:700;color:var(--accent-text-safe);letter-spacing:1px;" data-zh="對我而言" data-en="To me,">對我而言</div>
+                <h2 class="statement reveal d2" style="font-size:80px;" data-zh='設計師－引導團隊用<span class="highlight">視覺化溝通</span>的角色' data-en='A designer helps the team <span class="highlight">communicate through visuals</span>'>設計師－引導團隊用<span class="highlight">視覺化溝通</span>的角色</h2>
+                <div class="caption reveal d3" style="white-space:nowrap;" data-zh="將概念視覺化能有效對齊彼此想法，尤其在不同職能、不同文化的團隊裡" data-en='Turning ideas into visuals helps everyone get on the same page —<br>especially across different roles and cultures'>將概念視覺化能有效對齊彼此想法，尤其在不同職能、不同文化的團隊裡</div>
             </div>
             <div class="slide-index reveal d1">11 / 15</div>
         </section>
@@ -557,8 +572,8 @@ h2.heading {
             <div class="blob d2" style="width:28px;height:28px;background:var(--accent-2);bottom:190px;right:250px;border-radius:50%;"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>Reflection</div>
             <div class="center-content">
-                <div class="body-text reveal d1" style="font-size:30px;font-weight:700;color:var(--accent-text-safe);letter-spacing:1px;">為什麼再次選擇設計？</div>
-                <h2 class="statement reveal d2" style="font-size:64px; line-height:1.35;">在<span class="highlight highlight-orange">安全又自由的空間</span>裡探索，<br>讓我重新覺得設計是有趣的</h2>
+                <div class="body-text reveal d1" style="font-size:30px;font-weight:700;color:var(--accent-text-safe);letter-spacing:1px;" data-zh="為什麼再次選擇設計？" data-en="Why Choose Design Again?">為什麼再次選擇設計？</div>
+                <h2 class="statement reveal d2" style="font-size:64px; line-height:1.35;" data-zh='在<span class="highlight highlight-orange">安全又自由的空間</span>裡探索，<br>讓我重新覺得設計是有趣的' data-en='Exploring in a <span class="highlight highlight-orange">space that felt safe and free</span><br>reminded me that design can be fun'>在<span class="highlight highlight-orange">安全又自由的空間</span>裡探索，<br>讓我重新覺得設計是有趣的</h2>
             </div>
             <div class="slide-index reveal d1">12 / 15</div>
             <div class="walker-row reveal d3">
@@ -578,8 +593,8 @@ h2.heading {
             <div class="blob d1" style="width:28px;height:28px;background:var(--accent);top:150px;left:190px;border-radius:50%;"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>Reflection</div>
             <div class="content-wrap">
-                <h2 class="heading reveal d2" style="font-size:52px;white-space:nowrap;">從「人的本質」討論設計工作</h2>
-                <div class="item-card reveal d3" style="font-size:28px;line-height:1.6;">跟 Mentor 聊聊時，有很多稀鬆平常的話題對我來說卻是靈魂拷問，總之帶來一些新的思考，把設計師對人對行為的了解套用到我的工作狀態</div>
+                <h2 class="heading reveal d2" id="slide13Heading" style="font-size:52px;white-space:nowrap;width:max-content;" data-zh="從「人的本質」討論設計工作" data-en="Talking Design Through Human Nature">從「人的本質」討論設計工作</h2>
+                <div class="item-card reveal d3" style="font-size:28px;line-height:1.6;" data-zh="跟 Mentor 聊聊時，有很多稀鬆平常的話題對我來說卻是靈魂拷問，總之帶來一些新的思考，把設計師對人對行為的了解套用到我的工作狀態" data-en="Talking with my mentor, topics that felt casual to him hit me like soul-searching. Either way, they sparked new ways of thinking, taking what designers understand about people and behavior and turning it back on my own work.">跟 Mentor 聊聊時，有很多稀鬆平常的話題對我來說卻是靈魂拷問，總之帶來一些新的思考，把設計師對人對行為的了解套用到我的工作狀態</div>
             </div>
             <div class="photo-slot reveal d3" style="border:none;padding:0;overflow:hidden;background:none;display:block;">
                 <img src="images/13-mentor-chat.jpg" alt="與 Mentor 對話的場景" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);display:block;max-width:none;max-height:none;">
@@ -594,8 +609,8 @@ h2.heading {
             <div class="blob d1" style="width:32px;height:32px;background:var(--accent-2);top:150px;right:230px;border-radius:50%;"></div>
             <div class="chapter-pill reveal d1"><span class="dot"></span>Reflection</div>
             <div class="content-wrap">
-                <h2 class="heading reveal d1">用<span class="highlight">更寬廣的角度</span>看待設計</h2>
-                <div class="body-text reveal d2">我想成為的設計師，不只在意產品的體驗，<br>更是帶著團隊，在不確定的議題中做實驗、探索可能的方向</div>
+                <h2 class="heading reveal d1" data-zh='用<span class="highlight">更寬廣的角度</span>看待設計' data-en='Seeing Design from a <span class="highlight">Wider Angle</span>'>用<span class="highlight">更寬廣的角度</span>看待設計</h2>
+                <div class="body-text reveal d2" data-zh="我想成為的設計師，不只在意產品的體驗，<br>更是帶著團隊，在不確定的議題中做實驗、探索可能的方向" data-en="The designer I want to be isn’t just focused on product experience.<br>I want to lead a team through uncertainty, running experiments to find the way forward">我想成為的設計師，不只在意產品的體驗，<br>更是帶著團隊，在不確定的議題中做實驗、探索可能的方向</div>
             </div>
             <div class="slide-index reveal d1">14 / 15</div>
         </section>
@@ -611,8 +626,8 @@ h2.heading {
             <div class="chapter-pill reveal d1"><span class="dot"></span>Reflection</div>
             <div class="center-content">
                 <div class="body-text reveal d1" style="font-size:28px;letter-spacing:6px;font-weight:900;color:var(--accent-2);">TAKE AWAY</div>
-                <h2 class="statement reveal d2" style="font-size:52px;white-space:nowrap;">卡住的時候，不要急，<span class="highlight highlight-orange">給自己一點耐心</span></h2>
-                <div class="caption reveal d3">找到自己的小實驗或跟其他人對話，尋找做設計的原因或小火花，<br>我跟大家一樣也還在路上：）</div>
+                <h2 class="statement reveal d2" id="slide15Statement" style="font-size:52px;white-space:nowrap;" data-zh='卡住的時候，不要急，<span class="highlight highlight-orange">給自己一點耐心</span>' data-en='When you feel stuck, don’t rush<br><span class="highlight highlight-orange">give yourself some patience</span>'>卡住的時候，不要急，<span class="highlight highlight-orange">給自己一點耐心</span></h2>
+                <div class="caption reveal d3" style="white-space:nowrap;" data-zh="找到自己的小實驗或跟其他人對話，尋找做設計的原因或小火花，<br>我跟大家一樣也還在路上：）" data-en="Find your own small experiments, or talk to people around you.<br>Look for your reason to design, or just a little spark.<br>I’m still figuring it out too :)">找到自己的小實驗或跟其他人對話，尋找做設計的原因或小火花，<br>我跟大家一樣也還在路上：）</div>
             </div>
         </section>
 
@@ -827,10 +842,13 @@ const presentation = new SlidePresentation();
 new InlineEditor();
 
 // Auto-shrink headline elements that must not wrap (safety net if text length changes)
-(function(){
+const fitAllNowrap = (function(){
     const targets = [
         { id: 'slide8Statement', max: 1920 - 320, base: 84 },
-        { id: 'slide9Heading', max: 1920 - 280, base: 60 }
+        { id: 'slide9Heading', max: 1920 - 280, base: 60 },
+        { id: 'slide7Heading', max: 760, base: 56 },
+        { id: 'slide13Heading', max: 760, base: 52 },
+        { id: 'slide15Statement', max: 1400, base: 52 }
     ];
     function fitAll(){
         targets.forEach(t => {
@@ -846,6 +864,59 @@ new InlineEditor();
     }
     fitAll();
     window.addEventListener('resize', fitAll);
+    return fitAll;
+})();
+
+// Bilingual toggle: swaps every [data-en]/[data-zh] element's content, remembers choice
+(function(){
+    const btn = document.getElementById('langToggle');
+    if (!btn) return;
+    const els = document.querySelectorAll('[data-en][data-zh]');
+
+    // Some cards (e.g. slide2Card) must stay the same box size in both languages.
+    // Measure each language's real rendered width (actual loaded fonts) and lock
+    // the box to whichever is wider, with a small safety buffer.
+    function syncFixedWidthCards(){
+        document.querySelectorAll('.js-fixed-width').forEach(el => {
+            const maxAvailable = 1600; // safe cap within the 1640px content-wrap area
+            el.style.width = 'max-content';
+            el.style.whiteSpace = 'nowrap';
+            el.innerHTML = el.getAttribute('data-zh');
+            const zhW = el.scrollWidth;
+            el.innerHTML = el.getAttribute('data-en');
+            const enW = el.scrollWidth;
+            const needed = Math.max(zhW, enW) + 6;
+            if (needed <= maxAvailable) {
+                el.style.width = needed + 'px';
+            } else {
+                // Text is wider than the slide can fit on one line for at least one language;
+                // allow wrapping instead of overflowing off the slide.
+                el.style.whiteSpace = 'normal';
+                el.style.width = maxAvailable + 'px';
+            }
+        });
+    }
+
+    function applyLang(lang){
+        els.forEach(el => { el.innerHTML = el.getAttribute(lang === 'en' ? 'data-en' : 'data-zh'); });
+        btn.querySelectorAll('.lang-opt').forEach(s => s.classList.toggle('active', s.dataset.val === lang));
+        const coverTitle = document.getElementById('coverTitle');
+        if (coverTitle) coverTitle.style.fontSize = lang === 'en' ? '92px' : '';
+        try { localStorage.setItem('deckLang', lang); } catch(e) {}
+        fitAllNowrap();
+    }
+    let lang = 'zh';
+    try { lang = localStorage.getItem('deckLang') || 'zh'; } catch(e) {}
+    function init(){
+        syncFixedWidthCards();
+        applyLang(lang);
+    }
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(init).catch(init);
+    } else {
+        init();
+    }
+    btn.addEventListener('click', () => { applyLang(lang === 'zh' ? 'en' : 'zh'); lang = lang === 'zh' ? 'en' : 'zh'; });
 })();
 
 // Slide 6 meme reveal: clicking the slide itself also advances the substep
