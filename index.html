@@ -354,26 +354,35 @@ h2.heading {
             <div class="blob d4" style="width:34px;height:34px;background:var(--accent);bottom:230px;right:330px;border-radius:50%;"></div>
             <div class="blob d5" style="width:22px;height:22px;background:var(--accent-2);top:430px;right:180px;border-radius:50%;"></div>
             <div class="center-content">
-                <h1 class="display reveal d1" id="coverTitle" data-zh='透過<span class="highlight">行動</span><br>找回對設計的熱情' data-en='Through <span class="highlight">Action</span>,<br>I Found My Way Back to Design'>透過<span class="highlight">行動</span><br>找回對設計的熱情</h1>
-                <div class="pill reveal d2"><span class="dot"></span>Katy Liu．2026</div>
+                <div class="body-text reveal d1" style="font-size:30px;font-weight:700;color:var(--accent-text-safe);letter-spacing:1px;" data-zh="暫停一下" data-en="Stop, Wait a Minute">暫停一下</div>
+                <h1 class="display reveal d2" id="coverTitle" data-zh='做一場自己的 <span class="highlight">User Testing</span>' data-en='Running My Own <span class="highlight">User Testing</span>'>做一場自己的 <span class="highlight">User Testing</span></h1>
+                <div class="pill reveal d3"><span class="dot"></span>Katy Liu．2026</div>
             </div>
             <button class="lang-toggle reveal d2" id="langToggle" type="button" aria-label="切換語言 / Switch language">
                 <span class="lang-opt" data-val="zh">中文</span><span class="lang-sep">/</span><span class="lang-opt" data-val="en">EN</span>
             </button>
+            <div class="cover-meta reveal d2" style="position:absolute;bottom:130px;left:0;right:0;text-align:center;font-size:20px;font-weight:700;letter-spacing:1px;color:var(--text-secondary);pointer-events:none;" data-zh="第 8 屆曼陀號｜第三次月會" data-en="Mentorship Batch 8 | 3rd Monthly Meetup">第 8 屆曼陀號｜第三次月會</div>
         </section>
 
         <!-- ============================================================
              SLIDE 2 — 出發之前
              ============================================================ -->
-        <section class="slide layout-list">
+        <section class="slide layout-list" id="slide2" data-substep-max="1">
             <div class="blob d1" style="width:30px;height:30px;background:var(--accent-2);top:120px;right:220px;border-radius:50%;"></div>
             <div class="blob d2" style="width:46px;height:46px;background:var(--accent);bottom:160px;left:170px;border-radius:14px;transform:rotate(-10deg);"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>Before</div>
-            <div class="content-wrap">
-                <h2 class="heading reveal d1" data-zh="出發之前" data-en="Before I Left">出發之前</h2>
-                <div class="item-card reveal d2 js-fixed-width" id="slide2Card" style="font-weight:400;font-size:38px;line-height:1.85;padding:56px 64px;white-space:nowrap;width:fit-content;max-width:100%;display:block;text-align:left;" data-zh='離開一份工作，撕掉 "設計師" 的標籤，帶著很多迷惘，<br>在低潮期覺得自己可能要放棄做設計了' data-en="I quit my job and ripped off the “designer” label, carrying so much uncertainty with me.<br>At my lowest point, I genuinely thought I might be done with design for good.">
-                    離開一份工作，撕掉 "設計師" 的標籤，帶著很多迷惘，<br>
-                    在低潮期覺得自己可能要放棄做設計了
+            <div class="chapter-pill reveal d1"><span class="dot"></span>Background</div>
+            <div class="content-wrap" style="gap:36px;">
+                <h2 class="heading reveal d1" id="slide2Heading" style="white-space:nowrap;width:max-content;" data-zh="停下來，其實滿可怕的" data-en="Stopping Was Scarier Than I Expected">停下來，其實滿可怕的</h2>
+                <div class="stage-swap">
+                    <div class="meme-layer">
+                        <img src="images/02-brakes-screeching.gif" alt="Brakes screeching reaction meme">
+                    </div>
+                    <div class="cards-layer">
+                        <div class="item-card js-fixed-width" id="slide2Card" style="font-weight:400;font-size:38px;line-height:1.85;padding:56px 64px;white-space:nowrap;width:fit-content;max-width:100%;display:block;text-align:left;" data-zh='離開一份工作，撕掉 "設計師" 的標籤，帶著很多迷惘，<br>在低潮期覺得自己可能要放棄做設計了' data-en="I quit my job and ripped off the “designer” label, carrying so much uncertainty with me.<br>At my lowest point, I genuinely thought I might be done with design for good.">
+                            離開一份工作，撕掉 "設計師" 的標籤，帶著很多迷惘，<br>
+                            在低潮期覺得自己可能要放棄做設計了
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="slide-index reveal d1">02 / 15</div>
@@ -386,11 +395,11 @@ h2.heading {
             <div class="blob d1" style="width:54px;height:54px;background:var(--accent);top:150px;left:220px;border-radius:18px;transform:rotate(8deg);"></div>
             <div class="blob d2" style="width:26px;height:26px;background:var(--accent-2);bottom:200px;right:260px;border-radius:50%;"></div>
             <div class="blob d3" style="width:38px;height:38px;background:var(--primary);top:200px;right:200px;border-radius:12px;transform:rotate(-14deg);"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>Before</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>Background</div>
             <div class="center-content">
-                <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);" data-zh="為什麼出發？" data-en="Why Did I Go?">為什麼出發？</div>
+                <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);" data-zh="是什麼帶著我往前" data-en="What Pushed Me Forward">是什麼帶著我往前</div>
                 <h2 class="statement reveal d2" style="font-size:130px;font-family:var(--font-display);">Intuition</h2>
-                <div class="caption reveal d3" style="white-space:nowrap;" data-zh="不想錯過這份機會 — 這個念頭，已經放在心裡好久了" data-en="I didn’t want to miss this chance — a thought that had stuck with me for a long time.">不想錯過這份機會 — 這個念頭，已經放在心裡好久了</div>
+                <div class="caption reveal d3" style="white-space:nowrap;" data-zh="心裡想抓住這份放很久很難得的機會" data-en="Deep down, I wanted to hold on to this rare opportunity I’d been carrying for so long">心裡想抓住這份放很久很難得的機會</div>
             </div>
             <div class="slide-index reveal d1">03 / 15</div>
         </section>
@@ -400,7 +409,7 @@ h2.heading {
              ============================================================ -->
         <section class="slide layout-list">
             <div class="blob d1" style="width:34px;height:34px;background:var(--accent-2);top:150px;right:260px;border-radius:50%;"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>Before</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>Hypothesis</div>
             <div class="content-wrap" style="gap:44px;">
                 <div class="reveal d1" style="font-size:26px;color:var(--text-secondary);font-style:normal;">At the moment, life just doesn't feel interesting.</div>
                 <h2 class="heading reveal d2" data-zh="出發前，我想達成的三件事" data-en="Three Goals I Had Before I Left">出發前，我想達成的三件事</h2>
@@ -418,7 +427,7 @@ h2.heading {
              ============================================================ -->
         <section class="slide layout-split">
             <div class="blob d1" style="width:30px;height:30px;background:var(--accent);top:140px;left:170px;border-radius:50%;"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="content-wrap">
                 <h2 class="heading reveal d2" style="font-size:66px;">UnternehmerTUM<br>Digital Product School</h2>
                 <div class="item-card reveal d3" style="display:block;padding:44px 48px;">
@@ -440,7 +449,7 @@ h2.heading {
              ============================================================ -->
         <section class="slide layout-list" id="slide6" data-substep-max="1">
             <div class="blob d1" style="width:40px;height:40px;background:var(--accent-2);bottom:170px;right:200px;border-radius:14px;transform:rotate(10deg);"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="content-wrap" style="gap:36px;">
                 <h2 class="heading reveal d1">Challenge: <span class="highlight">Job Center</span></h2>
                 <div class="stage-swap">
@@ -473,7 +482,7 @@ h2.heading {
              ============================================================ -->
         <section class="slide layout-split">
             <div class="blob d1" style="width:26px;height:26px;background:var(--accent);top:150px;left:180px;border-radius:50%;"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="content-wrap">
                 <h2 class="heading reveal d2" id="slide7Heading" style="font-size:56px;white-space:nowrap;width:max-content;" data-zh="團隊一起做的好玩嘗試" data-en="Fun Experiments We Tried as a Team">團隊一起做的好玩嘗試</h2>
                 <div class="card-list">
@@ -494,7 +503,7 @@ h2.heading {
         <section class="slide layout-statement">
             <div class="blob d1" style="width:48px;height:48px;background:var(--accent-2);top:170px;right:230px;border-radius:16px;transform:rotate(-9deg);"></div>
             <div class="blob d2" style="width:24px;height:24px;background:var(--accent);bottom:180px;left:240px;border-radius:50%;"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="center-content">
                 <div class="body-text reveal d1" style="font-size:30px;letter-spacing:1px;font-weight:700;color:var(--accent-text-safe);text-align:center;" data-zh="議題研究的過程中的其他發現" data-en="Another Discovery Along the Way">議題研究的過程中的其他發現</div>
                 <h2 class="statement reveal d2" id="slide8Statement" style="white-space:nowrap;font-size:84px;text-align:center;" data-zh="台灣的政府數位服務做得很好！" data-en="Taiwan’s government digital services are actually really good!">台灣的政府數位服務做得很好！</h2>
@@ -507,7 +516,7 @@ h2.heading {
              ============================================================ -->
         <section class="slide layout-list">
             <div class="blob d1" style="width:36px;height:36px;background:var(--accent);top:140px;right:210px;border-radius:12px;transform:rotate(14deg);"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="content-wrap" style="gap:28px;">
                 <div class="sub-label reveal d1" data-zh="實際開始做，設計師很頭痛" data-en="Once We Started Building, Designers Felt the Pain">實際開始做，設計師很頭痛</div>
                 <h2 class="heading reveal d2" id="slide9Heading" style="white-space:nowrap;">PM &amp; SE are on top of <span class="highlight">DESIGNER</span></h2>
@@ -528,7 +537,7 @@ h2.heading {
              ============================================================ -->
         <section class="slide layout-split">
             <div class="blob d1" style="width:30px;height:30px;background:var(--accent-2);top:150px;left:190px;border-radius:50%;"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="content-wrap" style="right:620px;">
                 <h2 class="heading reveal d2" style="font-size:58px;white-space:nowrap;">We still got the <span class="highlight">SUPER POWER</span></h2>
                 <div class="body-text reveal d3" data-zh="打造一個從 0 到 1 的 MVP 產品" data-en="Building an MVP from scratch">打造一個從 0 到 1 的 MVP 產品</div>
@@ -555,7 +564,7 @@ h2.heading {
         <section class="slide layout-statement">
             <div class="blob d1" style="width:44px;height:44px;background:var(--accent);top:160px;left:230px;border-radius:14px;transform:rotate(-11deg);"></div>
             <div class="blob d2" style="width:28px;height:28px;background:var(--accent-2);bottom:190px;right:250px;border-radius:50%;"></div>
-            <div class="chapter-pill reveal d1"><span class="dot"></span>During the Program</div>
+            <div class="chapter-pill reveal d1"><span class="dot"></span>In Progress</div>
             <div class="center-content">
                 <div class="body-text reveal d1" style="font-size:30px;font-weight:700;color:var(--accent-text-safe);letter-spacing:1px;" data-zh="對我而言" data-en="To me,">對我而言</div>
                 <h2 class="statement reveal d2" style="font-size:80px;" data-zh='設計師－引導團隊用<span class="highlight">視覺化溝通</span>的角色' data-en='A designer helps the team <span class="highlight">communicate through visuals</span>'>設計師－引導團隊用<span class="highlight">視覺化溝通</span>的角色</h2>
@@ -848,7 +857,8 @@ const fitAllNowrap = (function(){
         { id: 'slide9Heading', max: 1920 - 280, base: 60 },
         { id: 'slide7Heading', max: 760, base: 56 },
         { id: 'slide13Heading', max: 760, base: 52 },
-        { id: 'slide15Statement', max: 1400, base: 52 }
+        { id: 'slide15Statement', max: 1400, base: 52 },
+        { id: 'slide2Heading', max: 1600, base: 76 }
     ];
     function fitAll(){
         targets.forEach(t => {
@@ -919,16 +929,15 @@ const fitAllNowrap = (function(){
     btn.addEventListener('click', () => { applyLang(lang === 'zh' ? 'en' : 'zh'); lang = lang === 'zh' ? 'en' : 'zh'; });
 })();
 
-// Slide 6 meme reveal: clicking the slide itself also advances the substep
+// Meme-reveal slides (stage-swap): clicking the slide advances its substep
 (function(){
-    const slide6 = document.getElementById('slide6');
-    if (slide6) {
-        slide6.style.cursor = 'pointer';
-        slide6.addEventListener('click', (e) => {
+    document.querySelectorAll('.slide[data-substep-max]').forEach(slide => {
+        slide.style.cursor = 'pointer';
+        slide.addEventListener('click', () => {
             // avoid double-trigger when clicking the fixed nav controls (they sit outside .slide, so this is safe)
             presentation.next();
         });
-    }
+    });
 })();
 </script>
 </body>
